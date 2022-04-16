@@ -1,0 +1,15 @@
+.container {
+  max-width: 1920px;
+  width: 100%;
+  margin: 0 auto;
+  padding-left: 160px;
+  padding-right: 160px;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.spase-between {
+  justify-content: space-between;
+}

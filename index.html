@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BLANCHART</title>
+  <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+  <link rel="stylesheet" href="css/index.css">
+  <script defer src="js/style.js"></script>
+</head>
+
+<body>
+  <header class="header">
+    <nav class="navbar container">
+      <div class="container-left">
+        <div class="logo__container">
+          <a class="navbar-brand" href="#">
+            <img src="img/nav/logo.svg" alt="logo" />
+          </a>
+        </div>
+        <div class="navbar__burger burger">
+          <div class=" menu-btn ">
+            <span class="burger__span"></span>
+            <span class="burger__span"></span>
+            <span class="burger__span"></span>
+          </div>
+          <div class="">
+            <div class="navbar-menu menu">
+              <ul class="navbar__list navbar-nav">
+                <li class="navbar__list--item nav-item">
+                  <a class="navbar__list--link nav-link" href="#">О нас</a>
+                </li>
+                <li class="navbar__list--item nav-item">
+                  <a class="navbar__list--link nav-link" href="#">Галерея</a>
+                </li>
+                <li class="navbar__list--item nav-item">
+                  <a class="navbar__list--link nav-link" href="#">Каталог</a>
+                </li>
+                <li class="navbar__list--item nav-item">
+                  <a class="navbar__list--link nav-link" href="#">События</a>
+                </li>
+                <li class="navbar__list--item nav-item">
+                  <a class="navbar__list--link nav-link" href="#">Проекты</a>
+                </li>
+                <li class="navbar__list--item nav-item">
+                  <a class="navbar__list--link nav-link" href="#">Контакты</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Button to open the modal login form -->
+      <button onclick="document.getElementById('id01').style.display='block'" class="modal-btn">
+        <svg class="btn-img" width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M5.12056 9.09278L6.13889 10.1111L9.75 6.5L6.13889 2.88889L5.12056 3.90722L6.98389 5.77778H0V7.22222H6.98389L5.12056 9.09278ZM11.5556 0H1.44444C0.642778 0 0 0.65 0 1.44444V4.33333H1.44444V1.44444H11.5556V11.5556H1.44444V8.66667H0V11.5556C0 12.35 0.642778 13 1.44444 13H11.5556C12.35 13 13 12.35 13 11.5556V1.44444C13 0.65 12.35 0 11.5556 0Z"
+            fill="white" />
+        </svg>
+        Войти
+      </button>
+      <!-- The Modal -->
+      <div id="id01" class="modal">
+        <span onclick="document.getElementById('id01').style.display='none'" class="close"
+          title="Close Modal">&times;</span>
+        <!-- Modal Content -->
+        <form class="modal-content animate" action="/action_page.php">
+          <div class="modal-container">
+            <div class="modal-cont">
+              <label for="uname"><b>Логин</b></label>
+              <input type="text" placeholder="Имя пользователя" name="uname" required>
+              <label for="psw"><b>Пароль</b></label>
+              <input type="password" placeholder="Введите пароль" name="psw" required>
+            </div>
+            <div class="log-container">
+              <button class="btn-enter" type="submit">Войти</button>
+              <label>
+                <input type="checkbox" checked="checked" name="remember">Запомнить пароль</label>
+              <button type="button" onclick="document.getElementById('id01').style.display='none'"
+                class="cancelbtn btn-cansel">Отмена</button>
+              <span class="psw">Забыли<a href="#"> пароль?</a></span>
+            </div>
+          </div>
+        </form>
+      </div>
+    </nav>
+  </header>
+
+</body>
+
+</html>

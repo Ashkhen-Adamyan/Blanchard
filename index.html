@@ -16,16 +16,16 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/media.css">
   <script defer src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script>
-  <script defer src="js/inputmask.min.js"></script>
-  <script defer src="js/graph-modal.min.js"></script>
+  <script defer src="js/libs/inputmask.min.js"></script>
+  <script defer src="js/libs/graph-modal.min.js"></script>
   <script defer src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
-  <script defer src="js/accordion.min.js"></script>
+  <script defer src="js/libs/accordion.min.js"></script>
   <script defer src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script defer src="https://unpkg.com/@popperjs/core@2"></script>
   <script defer src="https://unpkg.com/tippy.js@6"></script>
-  <script defer src="js/choices.min.js"></script>
+  <script defer src="js/libs/choices.min.js"></script>
   <script defer src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&mode=release&coordorder=latlong"></script>
-  <script defer src="js/main.js"></script>
+  <script defer type="module" src="js/client/main.js"></script>
 
 
 </head>
@@ -1479,7 +1479,7 @@
           <h3 class="list-reset contacts__place-name">Шоурум № 4</h3>
           <address class="contacts__place-address">Леонтьевский&nbsp;переулок,&nbsp;дом 5/1</address>
         </div>
-        <form id="form" class="contacts__form" data-netlify="true" action="#" method="POST">
+        <form id="form" class="contacts__form" data-netlify="true">
           <div class="contacts__form-wrap">
             <input class="contacts__form-input" type="text" name="name" id="name" placeholder="Имя*"
               data-validate-field="name" aria-label="Введите имя" required>
@@ -1488,8 +1488,9 @@
             <input class="contacts__form-input" type="tel" name="number" id="number" placeholder="Телефон*"
               data-validate-field="number" data-validate-rules="phone" aria-label="Введите телефон" required>
           </div>
-          <button class="contacts__form-btn btn1 btn" aria-label="Заказать звонок">Заказать обратный звонок</button>
-          <button class="contacts__form-btn btn2 btn" aria-label="Заказать звонок">Заказать</button>
+          <button type="submit" class="contacts__form-btn btn1 btn" aria-label="Заказать звонок">Заказать обратный
+            звонок</button>
+          <button type="submit" class="contacts__form-btn btn2 btn" aria-label="Заказать звонок">Заказать</button>
         </form>
         <div class="contacts__feedback">
           <h3 class="list-reset contacts__feedback-titl">Связаться в один клик</h3>

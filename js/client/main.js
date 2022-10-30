@@ -1,3 +1,5 @@
+import { getDataFromApi } from "./utlis.js";
+
 /*burger*/
 let menuBtn = document.querySelector(".header__burger");
 let menu = document.querySelector(".header__burger-menu");
@@ -449,15 +451,33 @@ validation
     },
   ]);
 
-form.addEventListener("submit", (e) => {
-  e.preventDefault();
-  const formData = new FormData(form);
+const onSendForm = (event) => {
+  event.preventDefault();
 
-  fetch("/", {
+  const formData = new FormData(event.target);
+
+  const headers = { "Content-Type": "application/x-www-form-urlencoded" };
+
+  const body = new URLSearchParams(formData).toString();
+
+  const params = {
     method: "POST",
-    headers: { "Content-Type": "application/x-www-form-urlencoded" },
-    body: new URLSearchParams(formData).toString(),
-  }).catch((error) => console.log("Sending form failed"));
+    mode: "cors",
+    cache: "no-cache",
+    headers,
+    body,
+  };
 
-  e.target.reset();
-});
+  getDataFromApi("/", params)
+    .then((data) => {
+      if (data) return;
+
+      event.target.reset();
+    })
+    .catch((error) => {
+      alert(error);
+      return error;
+    });
+};
+
+form.addEventListener("submit", onSendForm);
